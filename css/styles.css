@@ -1,0 +1,38 @@
+img{
+    max-width: 100%;
+    height: auto;
+}
+.carouselImg{
+    height: 70vh;
+    background-image: url(../img/ba1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+@media (min-width: 768px) {
+    .carouselImg{
+        height: 88vh;
+    }
+    .widthMd{
+        width: 50%;
+    }
+}
+.carouselImg::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+.imgContainer{
+    width: 6rem;
+}
+.z-index{
+    z-index: 1;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
