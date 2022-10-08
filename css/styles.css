@@ -2,6 +2,9 @@ img{
     max-width: 100%;
     height: auto;
 }
+a:hover{
+    color: #d6bc2a!important;
+}
 .carouselImg{
     height: 70vh;
     background-image: url(../img/ba1.jpg);
@@ -9,12 +12,18 @@ img{
     background-size: cover;
     background-position: center left;
 }
+.widthlg{
+    width: 100%;
+}
 @media (min-width: 768px) {
     .carouselImg{
         height: 88vh;
     }
     .widthMd{
         width: 50%;
+    }
+    .widthlg{
+        width: 75%;
     }
 }
 .carouselImg::after{
@@ -34,5 +43,8 @@ img{
 }
 .wrap{
     flex-wrap: wrap;
+}
+.flex-auto{
+    flex: 100%;
 }
 
