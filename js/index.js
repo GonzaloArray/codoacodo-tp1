@@ -35,8 +35,6 @@ function sendInfo(e) {
         category: category.value,
     };
 
-    // informationGeneral.push(obj);
-
     logicaCount(obj);
 }
 
@@ -45,11 +43,14 @@ function logicaCount(informacion) {
     let contador = 200;
 
     if (category === "estudiante") {
-        contador =  (contador % 80) * amound;
-    }else if(category === "traine"){
-        contador =  (contador % 50) * amound;
-    }else{
-        contador =  (contador % 15) * amound;
+        contador =  (amound * contador) - (contador * 80 / 100);
+
+    }else if(category === "trainee"){
+        contador =  (amound * contador) - (contador * 50 / 100);
+
+    }else if(category === "junior"){
+        contador =  (amound * contador) - (contador * 15 / 100);
+
     }
 
     mostrarValor(contador)
