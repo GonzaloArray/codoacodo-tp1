@@ -57,7 +57,7 @@ function logicaCount(informacion) {
 
 }
 function mostrarValor(valor) {
-    total.textContent = valor;
+    total.textContent = valor.toLocaleString();
 }
 function resetInfo() {
     formulario.reset();
