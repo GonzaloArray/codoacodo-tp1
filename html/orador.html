@@ -84,38 +84,43 @@
                 <div class="col-12">
                     <div class="row g-3">
                         <div class="col-6">
-                            <input class="form-control" type="text" placeholder="Nombre">
+                            <input
+                            id="name"
+                            class="form-control" type="text" placeholder="Nombre">
                         </div>
                         <div class="col-6">
-                            <input class="form-control" type="text" placeholder="Apellido">
+                            <input
+                            id="apellido"
+                            class="form-control" type="text" placeholder="Apellido">
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-3">
-                    <input class="form-control" type="text" placeholder="Correo">
+                    <input class="form-control" id="email" type="text" placeholder="Correo">
                 </div>
                 <div class="col-12 mt-3">
                     <div class="row g-3">
                         <div class="col-6 text-start">
                             <label class="mb-2" for="cantidad">Cantidad</label>
-                            <input id="cantidad" name="cantidad" class="form-control" type="text" placeholder="Cantidad">
+                            <input id="cantidad" name="cantidad" class="form-control" type="number" placeholder="Cantidad">
                         </div>
                         <div class="col-6 text-start">
-                            <label class="mb-2" for="cantidad">Categoria</label>
-                            <select class="form-control">
-                                <option value="">Estudiante</option>
-                                <option value="">Trainee</option>
-                                <option value="">Junior</option>
+                            <label class="mb-2" for="category">Categoria</label>
+                            <select id="category" class="form-control">
+                                <option value="estudiante">Estudiante</option>
+                                <option value="trainee">Trainee</option>
+                                <option value="junior">Junior</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-4 text-start">
-                    <h2 class="fs-5 px-4 py-3 bg-secondary rounded">Total a pagar: $ <span class="total"></span></h2>
+                    <h2 class="fs-5 px-4 py-3 bg-primary text-light rounded">Total a pagar: $ <span class="total"></span></h2>
                 </div>
+                <div class="mensajeError"></div>
                 <div class="row g-3">
                     <div class="col-6">
-                        <button class="btn btn-success w-100" id="borrar" type="submit">Borrar</button>
+                        <a class="btn btn-success w-100" id="borrar">Borrar</a>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-success w-100" id="resumen" type="submit">Resumen</button>
@@ -139,6 +144,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script -->
+    <script src="../js/index.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
